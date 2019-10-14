@@ -16,7 +16,7 @@
 <p> When you run vagrant with `vagrant ssh` and connect the database using `psql dbname`
 you should create those **views** :
 <ul>
-<li>`create view tresponses as select date(time), count(*) as responses from log group by date(time);`</li>
-<li>`create view terrors as select date(time), count(*) as errors from log where status != '200 OK' group by date(time) order by date(time);`</li>
+<li> `create view tresponses as select date(time), count(*) as responses from log group by date(time);` </li>
+<li> `create view terrors as select date(time), count(*) as errors from log where status != '200 OK' group by date(time) order by date(time);`</li>
 <li> `create view errors_prcentage as select to_char(tresponses.date, 'FMMon FMDD, YYYY'), ((errors*10000)/responses)*0.01 as percentage
-from tresponses join terrors on tresponses.date=terrors.date order by percentage desc;`</li></ul></p>
+from tresponses join terrors on tresponses.date=terrors.date order by percentage desc;` </li></ul></p>
