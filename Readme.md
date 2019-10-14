@@ -9,9 +9,9 @@ it's a python program that answer some questions about database from analyzing d
 ### Installation
 To run this program you have to install:
 
-*Vagrant
-*Python
-*Python3
+* Vagrant
+* Python
+* Python3
 
  When you run vagrant with `vagrant ssh` and connect the database using `psql dbname`
 you should create those **views** : 
